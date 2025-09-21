@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}My Shows{% endblock %}
+{% block main %}
+<h2>My Shows</h2>
+<table>
+    <tr>
+        <th>Show Name</th>
+        <th>Last Episode</th>
+        <th>Actions</th>
+    </tr>
+    {% for show in shows %}
+    <tr>
+        <td>{{ show.name }}</td>
+        <td>{{ show.last_episode }}</td>
+        <td>
+            <a href="/edit_show/{{ show.id }}">Edit</a> |
+            <a href="/delete_show/{{ show.id }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

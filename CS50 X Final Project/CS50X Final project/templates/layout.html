@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Shows{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- ---------- Header / Navbar ---------- -->
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            {% if session.get("user_id") %}
+                <a href="/add_show">Add Show</a>
+                <a href="/change_password">Change Password</a>
+                <a href="/logout">Logout</a>
+            {% else %}
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <!-- ---------- Flash Messages ---------- -->
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash-messages">
+          {% for message in messages %}
+            <p>{{ message }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <!-- ---------- Main Content ---------- -->
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+</body>
+</html>

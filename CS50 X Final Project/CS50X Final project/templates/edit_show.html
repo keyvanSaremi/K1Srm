@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}Edit Show{% endblock %}
+{% block main %}
+<h2>Edit Show</h2>
+<form method="post">
+    <label>Show Name:
+        <input type="text" name="name" value="{{ show.name }}" required>
+    </label>
+    <label>Season:
+        <input type="number" name="season" min="1" value="{{ season }}" required>
+    </label>
+    <label>Episode:
+        <input type="number" name="episode" min="1" value="{{ episode }}" required>
+    </label>
+    <button type="submit">Update Show</button>
+</form>
+{% endblock %}

@@ -1,0 +1,175 @@
+/* ---------- فونت و رنگ‌بندی عمومی ---------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1c1c1c;
+}
+
+/* ---------- هدر و ناوبری ---------- */
+header {
+    background-color: #0052cc;
+    padding: 15px 20px;
+    color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header nav a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* ---------- محتوای اصلی ---------- */
+main {
+    max-width: 650px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 35px 40px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ---------- فرم‌ها ---------- */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+}
+
+form label {
+    margin-bottom: 15px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+form input:focus {
+    border-color: #0052cc;
+    box-shadow: 0 0 5px rgba(0,82,204,0.3);
+    outline: none;
+}
+
+form button {
+    padding: 12px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #0052cc, #2680eb);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 15px;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,82,204,0.4);
+}
+
+/* ---------- جدول سریال‌ها ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+table th {
+    background-color: #0052cc;
+    color: white;
+    font-weight: 600;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #e6f0ff;
+}
+
+/* ---------- Flash Messages ---------- */
+.flash-messages p {
+    background-color: #f0f4c3; /* زرد روشن */
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px auto;
+    max-width: 360px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ---------- لینک‌های داخلی ---------- */
+a {
+    color: #0052cc;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #2680eb;
+}
+
+/* ---------- ریسپانسیو ---------- */
+@media (max-width: 700px) {
+    main {
+        margin: 20px;
+        padding: 25px;
+    }
+    header nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+    table th, table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+    form {
+        max-width: 90%;
+        padding: 20px;
+    }
+}

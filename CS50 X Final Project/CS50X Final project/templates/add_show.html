@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}Add Show{% endblock %}
+{% block main %}
+<h2>Add Show</h2>
+<form method="post">
+    <label>Show Name:
+        <input type="text" name="name" required>
+    </label>
+    <label>Season:
+        <input type="number" name="season" min="1" required>
+    </label>
+    <label>Episode:
+        <input type="number" name="episode" min="1" required>
+    </label>
+    <button type="submit">Add Show</button>
+</form>
+{% endblock %}
